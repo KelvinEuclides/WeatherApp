@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name" translatable="false">Weather</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="country_name" translatable="false">Country</string>
+    <string name="date">Sunday 10:00PM</string>
+    <string name="sunrise" translatable="false">Sunrise</string>
+    <string name="wind_speed" translatable="false">Wind Speed</string>
+    <string name="humidity" translatable="false">Humidity</string>
+    <string name="minimum" translatable="false">Minimum</string>
+    <string name="weather_placeholder">23*</string>
+    <string name="windspeed_placeholder">100KM/H</string>
+    <string name="humidity_placeholder">20%</string>
+    <string name="minimum_placeholder">15*</string>
+    <string name="current_weather">%d \u2103</string>
+</resources>
