@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
-import com.wit.weather.dummy.CityContent
+import com.wit.weather.city.CityContent
 
 class CityFragment : Fragment() {
 
@@ -34,11 +34,10 @@ class CityFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyCityRecyclerViewAdapter(CityContent.ITEMS) { idCity: Int,Country: String,Weather: Int ->
+                adapter = MyCityRecyclerViewAdapter(CityContent.ITEMS) { idCity: Int,Country: String->
                     val param = bundleOf(
                             "cityId" to idCity,
                             "Country" to Country,
-                            "Weather" to Weather
                     )
                     findNavController().navigate(R.id.action_cityFragment_to_weatherFragment, param)
                 }

@@ -1,4 +1,4 @@
-package com.wit.weather.dummy
+package com.wit.weather.city
 
 import java.util.ArrayList
 import java.util.HashMap

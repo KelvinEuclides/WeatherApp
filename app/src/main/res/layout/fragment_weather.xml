@@ -116,7 +116,7 @@
         android:id="@+id/iv_low"
         android:layout_width="23dp"
         android:layout_height="23dp"
-        android:src="@drawable/ic_drops"
+        android:src="@drawable/ic_termometer"
         app:layout_constraintBottom_toTopOf="@+id/tv_wind"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.835"
