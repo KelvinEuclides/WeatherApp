@@ -8,7 +8,7 @@
     tools:context=".WeatherFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_weather"
         android:layout_width="238dp"
         android:layout_height="242dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,16 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.243"
-        app:srcCompat="@drawable/ic_cloudy"
+        app:srcCompat="@drawable/ic_launcher_foreground"
         tools:src="@tools:sample/avatars"
-        tools:srcCompat="@drawable/ic_cloudy" />
+        tools:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/tv_weather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/date"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/iv_weather"
         app:layout_constraintEnd_toEndOf="@+id/tv_country"
         app:layout_constraintStart_toStartOf="@+id/tv_country"
         app:layout_constraintTop_toBottomOf="@+id/tv_country"
@@ -54,9 +54,9 @@
         android:text="@string/weather_placeholder"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/iv_weather"
+        app:layout_constraintStart_toStartOf="@+id/iv_weather"
+        app:layout_constraintTop_toBottomOf="@+id/iv_weather"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -102,7 +102,7 @@
 
     <TextView
         android:id="@+id/tv_humidity"
-        android:layout_width="24dp"
+        android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:text="@string/humidity_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +128,7 @@
 
     <TextView
         android:id="@+id/tv_low"
-        android:layout_width="24dp"
+        android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:text="@string/humidity_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"

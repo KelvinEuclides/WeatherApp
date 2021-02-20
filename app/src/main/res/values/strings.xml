@@ -1,16 +1,18 @@
 <resources>
-    <string name="app_name" translatable="false">Weather</string>
-    <string name="action_settings" translatable="false">Settings</string>
+    <string name="app_name">Weather</string>
+    <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="country_name" translatable="false">Country</string>
+    <string name="country_name">Country</string>
     <string name="date">Sunday 10:00PM</string>
-    <string name="sunrise" translatable="false">Sunrise</string>
-    <string name="wind_speed" translatable="false">Wind Speed</string>
-    <string name="humidity" translatable="false">Humidity</string>
-    <string name="minimum" translatable="false">Minimum</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="humidity">Humidity</string>
+    <string name="minimum">Minimum</string>
     <string name="weather_placeholder">23 \u2103</string>
-    <string name="windspeed_placeholder">100KM/H</string>
-    <string name="humidity_placeholder">20%</string>
+    <string name="windspeed_placeholder">%1$s KM/H</string>
+    <string name="humidity_placeholder">20 \%%</string>
     <string name="minimum_placeholder">15 \u2103</string>
     <string name="current_weather">%1$s\u2103</string>
+    <string name="percentage">%1$s \%%</string>
+    <string name="weather_link">http://openweathermap.org/img/wn/%1$s@4x.png</string>
 </resources>
