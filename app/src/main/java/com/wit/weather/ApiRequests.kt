@@ -7,5 +7,5 @@ import retrofit2.http.Query
 
 interface ApiRequests {
     @GET("data/2.5/weather?")
-    fun getWeather(@Query("q") q:String,@Query("appid") appid:String): Call<Weather>
+    fun getWeather(@Query("q") q:String,@Query("appid") appid:String,@Query("units") units:String): Call<Weather>
 }

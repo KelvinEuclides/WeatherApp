@@ -37,6 +37,7 @@ class WeatherFragment : Fragment() {
         //geting atributes from other view
         val param = requireArguments()
         val country = param.getString("Country").toString()
+        val units="metric"
         //view variables
         val tv_weather_number: TextView = view.findViewById(R.id.tv_weather_number)
         val tv_country: TextView = view.findViewById(R.id.tv_country)
@@ -50,30 +51,23 @@ class WeatherFragment : Fragment() {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         val service = retrofit.create(ApiRequests::class.java)
-        val call = service.getWeather(country,AppId)
+        val call = service.getWeather(country,AppId,units)
         call.enqueue(object : Callback<Weather> {
             override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
                 if (response.code() == 200) {
                     val weather = response.body()!!
                     tv_country.setText(weather.name)
-                    tv_weather_number.setText(convertktoc(weather.main!!.temp).toString())
+                    tv_weather_number.setText((String.format(getString(R.string.current_weather), weather.main!!.temp)))
                     tv_weather.setText(weather.weather!![0].description)
                     tv_wind.setText(weather.wind!!.speed.toString()+" km/h")
                     tv_humidity.setText(weather.main!!.humidity.toString()+"&#x0025;")
-                    tv_low.setText(convertktoc(weather.main!!.temp_min).toString())
+                    tv_low.setText((String.format(getString(R.string.current_weather),weather.main!!.temp_min)))
 
                 }
             }
 
             override fun onFailure(call: Call<Weather>, t: Throwable) {
-                Toast.makeText(activity, "Erro", Toast.LENGTH_LONG)
-                Log.d("erro", t.toString())
-            }
-
-            fun convertktoc(kelvin:Double):Double{
-                var celsus=kelvin-273.15
-                celsus=celsus.toBigDecimal().setScale(1, RoundingMode.UP).toDouble()
-                return celsus
+                Log.d("error", t.toString())
             }
 
         })

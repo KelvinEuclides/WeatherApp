@@ -8,9 +8,9 @@
     <string name="wind_speed" translatable="false">Wind Speed</string>
     <string name="humidity" translatable="false">Humidity</string>
     <string name="minimum" translatable="false">Minimum</string>
-    <string name="weather_placeholder">23*</string>
+    <string name="weather_placeholder">23 \u2103</string>
     <string name="windspeed_placeholder">100KM/H</string>
     <string name="humidity_placeholder">20%</string>
-    <string name="minimum_placeholder">15*</string>
-    <string name="current_weather">%d \u2103</string>
+    <string name="minimum_placeholder">15 \u2103</string>
+    <string name="current_weather">%1$s\u2103</string>
 </resources>
