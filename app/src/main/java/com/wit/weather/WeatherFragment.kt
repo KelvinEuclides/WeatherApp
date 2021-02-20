@@ -52,7 +52,7 @@ class WeatherFragment : Fragment() {
         val tv_humidity:TextView=view.findViewById(R.id.tv_humidity)
         val tv_low:TextView=view.findViewById(R.id.tv_low)
         val iv_weather:ImageView=view.findViewById(R.id.iv_weather)
-
+       //api call
         val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -61,6 +61,7 @@ class WeatherFragment : Fragment() {
         val call = service.getWeather(country, AppId, units)
         call.enqueue(object : Callback<Weather> {
             override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
+                //setting layout variables if query is sucessful
                 if (response.code() == 200) {
                     val weather = response.body()!!
                     tv_country.setText(weather.name)
@@ -71,12 +72,8 @@ class WeatherFragment : Fragment() {
                     tv_low.setText((String.format(getString(R.string.current_weather), weather.main!!.temp_min)))
                     val url = String.format(getString(R.string.weather_link), weather.weather!![0].icon).toString()
                     Picasso.get().load(url).into(iv_weather);
-                    Log.d("imagem", url)
-
-
                 }
             }
-
             override fun onFailure(call: Call<Weather>, t: Throwable) {
                 Log.d("error", t.toString())
             }
